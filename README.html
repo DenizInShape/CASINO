@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Roulette</title>
+    <link rel="stylesheet" href="C:\ICASINO\CASINO\MachineASous\MachineASous.css" />
+    <audio id="sound">
+        <source src="C:\ICASINO\slotmachine\son_levier.wav" type="audio/wav">
+    </audio>
+    <audio id="backgroundSound" loop>
+        <source src="C:\ICASINO\slotmachine\casinoAmbiance.wav" type="audio/wav">
+    </audio>
+</head>
+<body>
+    <header>
+        <h1> Machine à sous </h1>
+        <p id="balance">Solde : 50 jetons</p>
+        <p id="bet">Mise : 1 jeton</p>
+        
+           
+        </div>
+        <nav>
+            <ul>
+             <li><a href="C:/ICASINO/CASINO/ICASINO.html" id="back-to-lobby"><ion-icon name="home-outline"></ion-icon></a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    <div id="credits-container-balance"></div>
+    <div id="credits-container-bet"></div>
+
+<div class="bet-buttons">
+
+    <input class="bet-buttons1" type="button" value="Mise 1 jeton" />
+    <input class="bet-buttons5" type="button" value="Mise 2 jetons" />
+    <input class="bet-buttons10" type="button" value="Mise 3 jetons" />
+</div>
+
+    <div class="winningprize"></div>
+    <div class="machine">
+        <div class="levier"></div>
+    </div>
+            <button></button>
+
+    <div id="result" class="result-message"></div> 
+    <div class="container">
+        <div class="slot-item">
+            <div class="slot-img">
+                <img src="C:/ICASINO/slotmachine/diamond.png" />
+            </div>
+        </div>
+        <div class="slot-item">
+            <div class="slot-img">
+                <img src="C:/ICASINO/slotmachine/diamond.png" />
+            </div>
+        </div>
+        <div class="slot-item">
+            <div class="slot-img">
+                <img src="C:/ICASINO/slotmachine/diamond.png" />
+            </div>
+        </div>
+    </div>
+</body>    
+    <script src="SLOTTEST.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <footer>
+
+        <div class="details-box">
+            <div id="btn" onclick="toggleDetails()">
+                <ion-icon id="btn-icon" name="chevron-down"></ion-icon>
+            </div>
+        </div>
+        <div id="details">
+           3 diamonds = 10 * La mise                    
+           <p></p>
+           3 Cherrys = 5 * La mise
+           <p></p>
+           3 Watermelons = 2 * La mise 
+           <p></p>
+           3 Oranges = 2 * La mise
+           <p></p>
+           3 Grapes = 2 * La mise
+           <p></p>
+           3 Bananas = 2 * La mise 
+           <p></p>
+           3 Prunes = 2 * La mise 
+
+        </div>
+        
+    </footer>
+
+
+</html>
