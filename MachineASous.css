@@ -83,7 +83,7 @@ nav ul li a:hover {
 }
 
 .machine {
-    background-image: url("C:/ICASINO/slotmachine/cadremachine.png");
+    background-image: url("cadremachine.png");
     background-size: 400px;
     width: 400px;
     height: 330px;
@@ -135,7 +135,7 @@ button {
 }
 
 .levier {
-    background-image: url("C:/ICASINO/slotmachine/levier.png");
+    background-image: url("levier.png");
     height: 400px;
     width: 200px;
     background-repeat: no-repeat;  /* Évite la répétition de l'image */
@@ -145,7 +145,7 @@ button {
 }
 
 .levier.press{
-    background-image: url("C:/ICASINO/slotmachine/levierBas.png");
+    background-image: url("levierBas.png");
     position: absolute;
     top: 5px;
     z-index: 5;
