@@ -1,12 +1,12 @@
 const items = [
-  "banana", "banana", "banana", "banana",  
-  'watermelon',
-  'cherry', 'cherry', 'cherry', 'cherry', 
   'diamond',
-  'grapes', 'grapes', 'grapes', 
-  'orange', 'orange', 'orange', 'orange','orange',  
-
+  'grapes','grapes','grapes',
+  'banana', 'banana', 'banana',
+  'cherry', 'cherry',
+  'watermelon', 'watermelon', 'watermelon',
   'prune', 'prune', 'prune',
+  'orange', 'orange', 'orange',
+
 ];
 
 let playerBalance = 50; // Solde initial du joueur
@@ -49,6 +49,8 @@ document.querySelector(".bet-buttons10").addEventListener("click", () => {
 
 const buttonEl = document.querySelector("button")
 const levierEl = document.querySelector(".levier")
+const soundEl = document.getElementById("sound");
+
 
 buttonEl.addEventListener("click", () => {
   // Vérifier si le joueur a suffisamment de jetons pour placer une mise
@@ -56,6 +58,7 @@ buttonEl.addEventListener("click", () => {
     alert("Vous n'avez pas suffisamment de jetons.");
     return;
   }
+  soundEl.play();
 
   // Déduire le montant de la mise du solde du joueur
   playerBalance -= currentBet;
@@ -71,7 +74,7 @@ buttonEl.addEventListener("click", () => {
   levierEl.classList.toggle("press")
   setTimeout(()=>{
     levierEl.classList.toggle("press")
-  },500)
+  },1000)
 
   // Vérifier la combinaison gagnante après la rotation
   setTimeout(() => {
@@ -129,14 +132,26 @@ const chooseRandom = (imgEl) => {
         selectedItems[2] === winCombination[2]
       ) {
         // Le joueur gagne
-        playerBalance += currentBet * 2; // Vous pouvez ajuster le multiplicateur de gain au besoin
+        if (selectedItems[0] === 'diamond') {
+          // Si la combinaison est trois diamants, attribuez le jackpot
+          playerBalance += currentBet * 10;
+        }
+        else if (selectedItems[0] === 'cherry') {
+          // Si la combinaison est trois cherry, attribuez le gain
+          playerBalance += currentBet * 5;
+        } else {
+          // Pour les autres combinaisons, attribuez la mise habituelle
+          playerBalance += currentBet * 2;
+        }
+  
         updateBalance();
   
-        // Attendre 2 secondes avant d'afficher la fenêtre contextuelle
         setTimeout(() => {
           // Fenêtre contextuelle avec le message et option de rejouer
-          if (window.confirm(`Vous avez gagné ${currentBet * 2} jetons! Voulez-vous rejouer ?`)) {
+          if (window.confirm(`JACKPOT !! ${selectedItems[0] === 'diamond' ? currentBet * 10 : currentBet * 2} jetons! Voulez-vous rejouer ?`)) {
             resetGame(); // Fonction pour réinitialiser le jeu
+          } else if (window.confirm(`YOU WIN!! ${selectedItems[0] === 'cherry' ? currentBet * 5 : currentBet * 2} jetons! Voulez-vous rejouer ?`)){
+            resetGame();
           }
         }, 500);
   
@@ -155,6 +170,7 @@ const chooseRandom = (imgEl) => {
       }
     }, 500);
   };
+  
 
   let btn = document.getElementById("btn");
   let btnIcon = document.getElementById("btn-icon");
