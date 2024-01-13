@@ -106,7 +106,7 @@ const randomizeImg = (imgEl, time) => {
 const chooseRandom = (imgEl) => {
     const random = Math.floor(Math.random() * items.length);
     const selectedItem = items[random];
-    imgEl.src = `C:/ICASINO/slotmachine/${selectedItem}.png`;
+    imgEl.src = `${selectedItem}.png`;
     imgEl.classList.add("animate");
   };
   function openModal(message) {
