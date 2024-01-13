@@ -9,7 +9,7 @@ html, body {
 }
 body{
     margin-top: 100px;
-        background-image: url("C:/ICASINO/slotmachine/salon.png");
+    background-image: url("C:/ICASINO/slotmachine/salon.png");
     background-size: cover;  /* Utilisez 'cover' pour remplir complètement l'élément */
     background-repeat: no-repeat;  /* Évite la répétition de l'image */
 }
@@ -30,9 +30,8 @@ header {
     top: 0px;
     border-bottom-left-radius:20% ;
     border-bottom-right-radius:20% ;
-
-    background-color: #DD6E42;
-    color: #E8DAB2;
+    background-color: #750c0c;
+    color: #ffffff;
     text-align: center;
     width: 100%;
     height: 70px; /* Ajustez la hauteur du header */
@@ -40,20 +39,20 @@ header {
 h1 {
     font-family: 'Artifakt Element Thin';
     font-size: 30px;
-    color: #333; 
+    color: #fffefe; 
     margin-right: 950px;
 }
 #balance {
-    margin-right: 1000px; 
+    margin-right: 980px; 
     font-family: 'Courier New';
     font-size: 25px;
-    color: #f90000;
+    color: #ffffff;
     
 }
 #bet {
     font-family: 'Courier New';
     font-size: 25px;
-    color: #f90000;
+    color: #ffffff;
     margin-right: 1000px;
 }
 
@@ -88,19 +87,20 @@ nav ul li a:hover {
     background-size: 400px;
     width: 400px;
     height: 330px;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     margin-bottom: 100px;
+
 }
 
 
 .container {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 1155px;
-    margin-top: 45px;
+    left: 453px;
+    top: 280px;
 }
 
 .slot-img {
@@ -125,30 +125,33 @@ nav ul li a:hover {
 button {
     width: 50px;
     height: 50px;
-    margin-top: 40px;
-    background-color: blue;
+    background-color: rgb(5, 5, 249);
     position: absolute;
-    right: -20px;
-    top: 30px;
+    left: 805px;
+    top: 180px;
+    z-index: 999;
     opacity: 0;
+    cursor: pointer;
 }
+
 .levier {
     background-image: url("C:/ICASINO/slotmachine/levier.png");
     height: 400px;
     width: 200px;
-    background-size: cover;  /* Utilisez 'cover' pour remplir complètement l'élément */
     background-repeat: no-repeat;  /* Évite la répétition de l'image */
     position: absolute;
-    margin-left: 237px;
+    left: 237px;
+    z-index: 6;
 }
 
 .levier.press{
     background-image: url("C:/ICASINO/slotmachine/levierBas.png");
     position: absolute;
+    top: 5px;
+    z-index: 5;
 
 
 }
-/* Déplacez le positionnement de la div "bet-buttons" */
 .bet-buttons {
     position: absolute;
     top: 450px; /* Ajustez la distance par rapport au bas selon vos besoins */
@@ -157,41 +160,38 @@ button {
     margin-left:-40px ;
   }
   
-  /* Ajustez le style des boutons de mise */
   .bet-buttons input {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #0c7575; /* Rouge orange */
+    background-color: #750c0c; /* Rouge orange */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
     top: 50px;
-
-    
   }
   
-.result-message {
-    font-size: px; /* Taille de police plus grande */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Changez la police selon vos préférences */
-    color: #27ae60; /* Couleur du texte pour un message de gain */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 998;
-    text-shadow: 2px 2px 4px #f90000; /* Ombre portée pour un effet esthétique */
-}
+  /* Effet de bordure en relief */
+  .bet-buttons input.bet-buttons1,
+  .bet-buttons input.bet-buttons5,
+  .bet-buttons input.bet-buttons10 {
+    border: 2px solid #a63f3f; /* Couleur de la bordure */
+  }
+  
+  /* Effet de bordure enfoncée lors du clic */
+  .bet-buttons input.bet-buttons1:active,
+  .bet-buttons input.bet-buttons5:active,
+  .bet-buttons input.bet-buttons10:active {
+    border: 2px solid #750c0c; /* Couleur de la bordure enfoncée */
+  }
+  
 
 
 .details-box {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }
-
 
 #btn {
     width: 40px;
@@ -204,12 +204,14 @@ button {
     font-size: 40px;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin-top: 600px;
-    margin-right: 1150px;
+    position: absolute;
+    left: 1000px; /* Adjust the left position as needed */
+    top: 100px;
 }
 
+
 #btn:hover {
-    background-color: #fad961;
+    background-color: #750c0c;
 }
 
 #btn:hover ion-icon {
@@ -227,11 +229,18 @@ button {
 
 
 #details {
-    line-height: 1.6;
     font-weight: bold;
     text-align: justify;
     height: 0;
     overflow: hidden;
+    position: absolute;
+    top: 150px;
+    left:950px;
+    color: #ffffff;
+    font-family: 'Artifakt Element Thin';
+    background-color: #750c0c;
+    border-radius: 3%;
+
 }
 
 
@@ -249,9 +258,9 @@ button {
     position: absolute;
     top: 80px;
     left: 5px;
-    width: 250px;
+    width: 260px;
     height: 20px;
-    background-color: #000000;
+    background-color: #750c0c;
     padding: 10px;
     border-radius: 5px;
 }
@@ -259,9 +268,13 @@ button {
     position: absolute;
     top: 134px;
     left: 5px;
-    width: 250px;
+    width: 260px;
     height: 20px;
-    background-color: #000000;
+    background-color: #750c0c;
     padding: 10px;
     border-radius: 5px;
 }
+footer{
+    margin-bottom: 500px;
+}
+
