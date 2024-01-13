@@ -9,7 +9,7 @@ html, body {
 }
 body{
     margin-top: 100px;
-    background-image: url("C:/ICASINO/slotmachine/salon.png");
+    background-image: url("salon.png");
     background-size: cover;  /* Utilisez 'cover' pour remplir complètement l'élément */
     background-repeat: no-repeat;  /* Évite la répétition de l'image */
 }
